@@ -49,7 +49,7 @@ export default class HueBridge {
       return localSearch.map((item) => {
         const port = item.service.port;
         const internalipaddress = item.address;
-        const [buffer] = item.packet.additionals;
+        const [buffer] = item.packet.answers;
         const id = buffer.rdata.bridgeid;
 
         return {
